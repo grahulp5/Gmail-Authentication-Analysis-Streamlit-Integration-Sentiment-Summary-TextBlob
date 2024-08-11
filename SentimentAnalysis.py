@@ -13,12 +13,24 @@ from email import message_from_bytes
 from textblob import TextBlob
 
 # Loading API key file for OpenAI API. Create using https://platform.openai.com/docs/models/gpt-4o-mini
-with open('openai_key.json', 'r') as f:
-    data = json.load(f)
-    api_key = data['api_key']
+#with open('openai_key.json', 'r') as f:
+#    data = json.load(f)
+#    api_key = data['api_key']
+def load_api_key(file_path):
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+            openai.api_key = data['api_key']
+    except FileNotFoundError:
+        st.write(f"Error: File '{file_path}' not found.")
+    except json.JSONDecodeError:
+        st.write(f"Error: Invalid JSON in '{file_path}'.")
+
+# Example usage:
+client=load_api_key('openai_key.json')
 
 # Initialize OpenAI client
-client = OpenAI(api_key=os.environ.get("openai_key.json"))
+#client = OpenAI(api_key=os.environ.get("openai_key.json"))
 
 # If modifying these SCOPES, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
