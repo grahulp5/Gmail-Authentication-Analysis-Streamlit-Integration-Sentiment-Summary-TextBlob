@@ -21,3 +21,7 @@ Sentiment and Summary analysis page
 ![Sentiment Analysis Page](https://github.com/grahulp5/Gmail-Authentication-Analysis-Streamlit-Integration-Sentiment-Summary-TextBlob/blob/main/sentiment.png)
 <br/><br/><br/>
 This web app is built by <a href="https://www.linkedin.com/in/rahul-gupta-a31749166/" target="_blank">Rahul Gupta</a>
+<br/><br/>
+Reference:
+- Gmail API usage by Jie Jenn https://www.youtube.com/watch?v=44ERDGa9Dr4
+- GPT 4o mini guide by Benjamin https://benjamincrozat.com/gpt-4o-mini
