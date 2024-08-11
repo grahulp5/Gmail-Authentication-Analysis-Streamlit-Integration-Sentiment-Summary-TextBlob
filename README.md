@@ -16,4 +16,4 @@ Word cloud page
 Sentiment and Summary analysis page
 ![Sentiment Analysis Page](https://github.com/grahulp5/Gmail-Authentication-Analysis-Streamlit-Integration-Sentiment-Summary-TextBlob/blob/main/sentiment.png)
 <br/><br/><br/>
-This web app is built by https://www.linkedin.com/in/rahul-gupta-a31749166/
+This web app is built by <a href="https://www.linkedin.com/in/rahul-gupta-a31749166/" target="_blank">Rahul Gupta</a>
