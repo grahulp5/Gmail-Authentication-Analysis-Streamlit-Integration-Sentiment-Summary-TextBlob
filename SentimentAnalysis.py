@@ -3,7 +3,7 @@ import os
 import pickle
 import base64
 import json
-from openai import OpenAI
+from openai import Completion
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -17,7 +17,7 @@ with open('openai_key.json', 'r') as f:
     openai.api_key = data['api_key']
 
 # Initialize OpenAI client
-client = OpenAI(api_key=openai.api_key)
+client = openai.api_key
 
 # If modifying these SCOPES, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
