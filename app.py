@@ -2,6 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as stc
 from RetrieveSpam import analysis
 from SentimentAnalysis import sentanalysis
+pip install openai
 
 # HTML template for the header
 html_temp = """
