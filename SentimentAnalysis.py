@@ -18,7 +18,7 @@ with open('openai_key.json', 'r') as f:
     api_key = data['api_key']
 
 # Initialize OpenAI client
-client = OpenAI(api_key=api_key)
+client = OpenAI(api_key=os.environ.get("openai_key.json"))
 
 # If modifying these SCOPES, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
