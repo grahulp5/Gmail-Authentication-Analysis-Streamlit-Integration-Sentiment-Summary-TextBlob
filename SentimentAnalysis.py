@@ -3,7 +3,8 @@ import os
 import pickle
 import base64
 import json
-from openai import Completion
+import openai
+from openai import OpenAI
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -14,10 +15,10 @@ from textblob import TextBlob
 # Loading API key file for OpenAI API. Create using https://platform.openai.com/docs/models/gpt-4o-mini
 with open('openai_key.json', 'r') as f:
     data = json.load(f)
-    openai.api_key = data['api_key']
+    api_key = data['api_key']
 
 # Initialize OpenAI client
-client = openai.api_key
+client = OpenAI(api_key=api_key)
 
 # If modifying these SCOPES, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
