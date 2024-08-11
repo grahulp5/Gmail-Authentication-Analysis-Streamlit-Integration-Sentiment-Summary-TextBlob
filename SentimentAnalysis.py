@@ -14,10 +14,10 @@ from textblob import TextBlob
 # Loading API key file for OpenAI API. Create using https://platform.openai.com/docs/models/gpt-4o-mini
 with open('openai_key.json', 'r') as f:
     data = json.load(f)
-    api_key = data['api_key']
+    openai.api_key = data['api_key']
 
 # Initialize OpenAI client
-client = OpenAI(api_key=api_key)
+client = OpenAI(api_key=openai.api_key)
 
 # If modifying these SCOPES, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
