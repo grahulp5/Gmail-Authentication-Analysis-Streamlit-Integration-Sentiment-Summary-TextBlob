@@ -24,6 +24,13 @@ client_service_data = {
 
 with open("client_service.json", "w") as f:
     json.dump(client_service_data, f, indent=4)
+
+openai_key={
+    "api_key": os.environ.get("api_key")
+}
+
+with open("openai_key.json", "w") as f:
+    json.dump(openai_key, f, indent=4)
     
 # Loading API key file for OpenAI API. Create using https://platform.openai.com/docs/models/gpt-4o-mini
 #with open('openai_key.json', 'r') as f:
@@ -35,10 +42,8 @@ def load_api_key(file_path):
             data = json.load(f)
             openai.api_key = data['api_key']
     except FileNotFoundError:
-        #st.write(f"Error: File '{file_path}' not found.")
-        "api_key": os.environ.get("api_key")
-        with open("openai_key.json", "w") as f:
-            json.dump(client_service_data, f, indent=4)
+        st.write(f"Error: File '{file_path}' not found.")
+    
     except json.JSONDecodeError:
         st.write(f"Error: Invalid JSON in '{file_path}'.")
 
