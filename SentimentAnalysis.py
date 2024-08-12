@@ -35,7 +35,10 @@ def load_api_key(file_path):
             data = json.load(f)
             openai.api_key = data['api_key']
     except FileNotFoundError:
-        st.write(f"Error: File '{file_path}' not found.")
+        #st.write(f"Error: File '{file_path}' not found.")
+        "api_key": os.environ.get("api_key")
+        with open("openai_key.json", "w") as f:
+            json.dump(client_service_data, f, indent=4)
     except json.JSONDecodeError:
         st.write(f"Error: Invalid JSON in '{file_path}'.")
 
