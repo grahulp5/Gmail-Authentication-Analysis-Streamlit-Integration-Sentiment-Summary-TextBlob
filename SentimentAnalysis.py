@@ -137,7 +137,7 @@ def retrieve_and_process_emails():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file('client_secret.json', SCOPES)
-            creds = flow.run_local_server(port=8080)
+            creds = flow.run_local_server(port=8501)
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
     service = build('gmail', 'v1', credentials=creds)
