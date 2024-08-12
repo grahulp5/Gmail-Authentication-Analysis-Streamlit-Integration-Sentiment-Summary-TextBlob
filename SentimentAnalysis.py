@@ -12,6 +12,19 @@ from googleapiclient.discovery import build
 from email import message_from_bytes
 from textblob import TextBlob
 
+client_service_data = {
+    "client_id": os.environ.get("client_id"),
+    "project_id": os.environ.get("project_id"),
+    "auth_uri": os.environ.get("auth_uri"),
+    "token_uri": os.environ.get("token_uri"),
+    "auth_provider_x509_cert_url": os.environ.get("auth_provider_x509_cert_url"),
+    "client_secret": os.environ.get("client_secret")
+   
+}
+
+with open("client_service.json", "w") as f:
+    json.dump(client_service_data, f, indent=4)
+    
 # Loading API key file for OpenAI API. Create using https://platform.openai.com/docs/models/gpt-4o-mini
 #with open('openai_key.json', 'r') as f:
 #    data = json.load(f)
