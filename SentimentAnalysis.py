@@ -11,7 +11,7 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from email import message_from_bytes
 from textblob import TextBlob
-
+'''
 client_service_data = {
     "client_id": os.environ.get("client_id"),
     "project_id": os.environ.get("project_id"),
@@ -31,7 +31,8 @@ openai_key={
 
 with open("openai_key.json", "w") as f:
     json.dump(openai_key, f, indent=4)
-    
+ '''
+
 # Loading API key file for OpenAI API. Create using https://platform.openai.com/docs/models/gpt-4o-mini
 #with open('openai_key.json', 'r') as f:
 #    data = json.load(f)
