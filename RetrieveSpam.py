@@ -15,7 +15,7 @@ import streamlit as st
 
 # If modifying these SCOPES, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
-
+'''
 client_service_data = {
     "client_id": os.environ.get("client_id"),
     "project_id": os.environ.get("project_id"),
@@ -28,6 +28,7 @@ client_service_data = {
 
 with open("client_service.json", "w") as f:
     json.dump(client_service_data, f, indent=4)
+'''
 
 #Getting the email contents
 def get_email_content(message):
